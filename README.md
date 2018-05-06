@@ -2,7 +2,7 @@
 
 ## What is GritUI?
 
-GritUI is designed for a iOS app called Codea, you can learn about it on [Codea Official Website](codea.io).
+GritUI is designed for a iOS app called Codea, you can learn about it on [Codea Official Website](https://codea.io).
 
 To solve the problem that I can't create a button, a slider or a switch directly, I created GritUI. It includes a slider, a switch, a pop-up window and something else.
 
