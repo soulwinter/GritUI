@@ -7,9 +7,9 @@ GritUI is designed for an iOS app called Codea, you can learn about it on [Codea
 To solve the problem that I can't create a button, a slider or a switch directly, I created GritUI. It includes a slider, a switch, a pop-up window and something else.
 
 You can just use them like this:
-
+```lua
   addNewPopAlert("Hello!","Welcome!",true,5)
-
+```
 and you have finished.
 
 ## Can I use it now?
