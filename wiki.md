@@ -19,7 +19,7 @@ You must set the minimum for gSlider which will be displayed when the button is 
 You must set the position in which the slider displays.
 - init value (essential)
 
-You must set the init value of the slider. (attenton: the init value's init is pixel)
+You must set the init value of the slider. (attenton: the init value's unit is pixel)
 - color (optional)
 
 You can set the slider's color. (use the `color()` function)
