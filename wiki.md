@@ -8,6 +8,7 @@ This is a slider, you can customize the following arguments:
 
 You must set the length (for example: 200 pixels)
 - minimum (essential)
+
 You must set the minimum for gSlider which will be displayed when the button is pulled to the far left.
 
 - maximum (essential)
@@ -55,4 +56,4 @@ for example:
 ```lua
 	test:touched(touch)
 ```
-`xxx.num` is the value you want, you can see how to use it in `main()`.
+`xxx.num` is the value you want, you can see how to use it in `main.lua`.
