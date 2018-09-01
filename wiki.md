@@ -67,6 +67,7 @@ This is an easy switch, you can customize the following arguments:
 - radius of the switch (optional)
 - color of the switch (optional)
 - init state (`true` or `false`) (optional)
+
 **Some arguments are similar to gSlider.**
 
 ### How to use
