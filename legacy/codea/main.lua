@@ -14,7 +14,7 @@ function setup()
     addNewTopAlert("Welcome to GritUI v"..version.."!","Available components:\n- gSlider A playful slider\n- gCircleSwitch A simple circular switch\n- gTopAlert An animated top banner\n- gSmoothButton A rounded button\n- gPopAlert A two-action popup\n\nPlease report any issues to the author, SoulWINTER.",Color3)
     Color4 = color(255, 0, 186, 255)
     Button = gSmoothButton(WIDTH/2,HEIGHT-500,'Show slider value',function() addNewTopAlert(slider.num or "...") end,Color4,20)
-    Button2 = gSmoothButton(WIDTH/2,HEIGHT-600,"Test gPopAlert",function() addNewPopAlert("Test gPopAlert","Would you like to show a top alert?\nver."..version,Color3,"Show alert","Close",function() addNewTopAlert("A colorful top alert","Opened from a popup!",color(math.random(1,255),math.random(1,255),math.random(1,255),255)) pop() end,function() pop() end) end,Color4,20)    
+    Button2 = gSmoothButton(WIDTH/2,HEIGHT-600,"Test gPopAlert",function() addNewPopAlert("Test gPopAlert","Would you like to show a top alert?\nver."..version,Color3,"Show alert","Close",function() addNewTopAlert("A colorful top alert","Opened from a popup!",color(math.random(1,255),math.random(1,255),math.random(1,255),255)) pop() end,function() pop() end) end,Color4,20)
     http.request("https://raw.githubusercontent.com/soulwinter/gritui/master/version.txt",didGetData)
 end
 function didGetData(data)

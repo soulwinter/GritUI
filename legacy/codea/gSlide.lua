@@ -27,7 +27,7 @@ function gSlider:draw()
     fill(223, 224, 223, 36)
     -- stroke(212, 209, 213, 255)
     -- ellipse
-    
+
     -- sprite(self.img,self.pos.x-self.length/2+self.buttonPos,self.pos.y-3/15*self.radius)
     strokeWidth(1.3/15*self.radius)
     stroke(197, 192, 192, 255)
@@ -45,9 +45,9 @@ function gSlider:touched(touch)
     if touch.state == BEGAN and touch.x >= (self.pos.x-self.length/2+self.buttonPos)-self.radius and touch.x <= self.pos.x-self.length/2+self.buttonPos+self.radius and touch.y >= self.pos.y-self.radius and touch.y <= self.pos.y+self.radius then
         self.isTouching = true
         tween(0.1,self.strokes,{width = self.onceStroke+self.radius/26*8})
-        
+
     end
-    
+
     if touch.state ~= ENDED and self.isTouching == true then
         if touch.x-(self.pos.x-self.length/2)>=0 and touch.x-(self.pos.x-self.length/2)<=self.length then
             self.buttonPos = touch.x-(self.pos.x-self.length/2)
@@ -59,12 +59,12 @@ function gSlider:touched(touch)
             self.buttonPos = self.length
         end
     end
-    
+
     if touch.state == ENDED and self.isTouching == true then
         self.isTouching = false
        local t2 = tween(0.05,self.strokes,{width = self.onceStroke-self.radius/17*12})
         local t3 = tween(0.1,self.strokes,{width = self.onceStroke})
-        tween.sequence(t2,t3) 
+        tween.sequence(t2,t3)
     end
 end
 

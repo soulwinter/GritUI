@@ -32,7 +32,7 @@ function gSmoothButton:init(x,y,str,clickedFunc,ButtonColor,size)
     self.isEnded = false
 end
 function gSmoothButton:draw()
-    textMode(CENTER) 
+    textMode(CENTER)
     self.pushColor.a = self.currentLine.alpha
     tint(self.button.buttonColor)
     sprite(self.buttonImg,self.button.x,self.button.y)
@@ -53,7 +53,7 @@ end
 function gSmoothButton:touched(t)
     if t.state == BEGAN and t.x > self.button.x - self.button.width/2 - self.button.height/2 and t.x < self.button.x + self.button.width/2 - self.button.height/2 and t.y > self.button.y - self.button.height/2 and t.y < self.button.y + self.button.height/2  then
         if self.isEnded then
-            self.isEnded = false 
+            self.isEnded = false
         end
         self.isTouching = true
         self.currentLine.width = 0

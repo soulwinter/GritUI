@@ -13,9 +13,9 @@ function gTopAlert:init(boldText,Text,Color,sec)
     self.sec = sec or 3
     self.secc = {s=0}
     self.bText = boldText
-    self.Text = Text or ""   
+    self.Text = Text or ""
     self.alertColor = Color or color(255, 134, 0, 255)
-    self.k = WIDTH/1024    
+    self.k = WIDTH/1024
     fontSize(20)
     textWrapWidth(WIDTH-40)
     local rh1,rh2 = 0
@@ -46,11 +46,11 @@ function gTopAlert:init(boldText,Text,Color,sec)
         rect(0,i/255*30,WIDTH+5,10-i/255*30-1)
     end
     setContext()
-    
+
     self.y = {y=-self.rectHeight/2}
     self.start1,self.start2 = false,false
     textWrapWidth(WIDTH)
-    
+
 end
 function gTopAlert:draw()
     for k,v in pairs(gTopAlertTable) do
@@ -60,19 +60,19 @@ function gTopAlert:draw()
         local t2 = tween(0.2,v.y,{y=v.rectHeight/2})
         tween.sequence(t1,t2)
         tween(v.sec,v.secc,{s=v.sec})
-    end    
+    end
     noStroke()
     sprite(v.img,WIDTH/2,HEIGHT-v.y.y)
     --  print(v.secc.s)
     if v.sec == v.secc.s and v.start2 == false then
-        v.start2 = true       
+        v.start2 = true
         local t1 = tween(0.2,v.y,{y=v.rectHeight/2+10},quad)
         local t2 = tween(0.2,v.y,{y=-v.rectHeight/2-21},tween.easing.linear,function() table.remove(gTopAlertTable,k) end)
-        tween.sequence(t1,t2)       
-    end   
-       
+        tween.sequence(t1,t2)
     end
-    
+
+    end
+
 end
 function gTopAlert:destroy()
     self = nil
